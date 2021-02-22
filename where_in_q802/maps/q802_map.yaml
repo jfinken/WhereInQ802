@@ -1,4 +1,4 @@
-image: <YOUR MAP NAME>
+image: q802_map.pgm 
 resolution: 0.01
 origin: [-10.0, -10.0, 0.0]
 occupied_thresh: 0.65

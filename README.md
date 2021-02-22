@@ -94,3 +94,14 @@ cp src/pgm_map_creator/maps/<YOUR MAP NAME>  src/<YOUR PACKAGE NAME>/maps/<YOUR 
 # Also provide a yaml file for the map:
 # http://wiki.ros.org/map_server#YAML_format
 ```
+
+#### Teleop Package
+
+If you prefer to control your robot to help it localize itself, add the teleop
+node to your package.
+```
+git clone https://github.com/ros-teleop/teleop_twist_keyboard
+catkin_make
+source devel/setup.bash
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+```
