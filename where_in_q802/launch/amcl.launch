@@ -1,19 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <launch>
  
     <!-- The map_server node -->
     <arg name="map_file" default="$(find where_in_q802)/maps/q802_map.yaml"/>
     <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
 
-    <!-- The amcl node 
-        By default, amcl package will look for the scan topic for LiDAR data. 
-        In the simulation, the Hokuyo LiDAR sensor actually publishes on the 
-        where_in_q802/laser/scan topic. Remap from scan to our topic.
+    <!-- The amcl node -->
+    <!-- By default, amcl package will look for the scan topic for LiDAR data. -->
+    <!-- In the simulation, the Hokuyo LiDAR sensor actually publishes on the -->
+    <!-- where_in_q802/laser/scan topic. Remap from scan to our topic -->
 
-        Furthermore, the AMCL node also requires a set of parameters in order 
-        to connect the world (map frame) with the robot (odom frame).
-    -->
+    <!-- Furthermore, the AMCL node also requires a set of parameters in order -->
+    <!-- to connect the world (map frame) with the robot (odom frame) -->
+
     <node name="amcl" pkg="amcl" type="amcl" output="screen">
-        <remap from="scan" to="where_in_q802/laser/scan"/>
+        <!--<remap from="scan" to="where_in_q802/laser/scan"/>-->
         <param name="odom_frame_id" value="odom"/>
         <param name="odom_model_type" value="diff-corrected"/>
         <param name="base_frame_id" value="robot_footprint"/>
@@ -28,11 +30,10 @@
     <node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen">
         <remap from="scan" to="where_in_q802/laser/scan"/>
 
-        <!-- config file(s) for the move_base node 
-            These config files have a preset of parameters defined for you to
-            navigate the robot if we choose to send navigation goal to the robot
-            in testing.
-        -->
+        <!-- config file(s) for the move_base node -->
+        <!--    These config files have a preset of parameters defined for you to   -->
+        <!--    navigate the robot if we choose to send navigation goal to the robot-->
+
         <param name="base_global_planner" value="navfn/NavfnROS" />
         <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/>
         <rosparam file="$(find where_in_q802)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
