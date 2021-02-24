@@ -1,6 +1,13 @@
-image: q802_map.pgm 
+image: q802_map2.pgm 
 resolution: 0.01
-origin: [-10.0, -10.0, 0.0]
+# pixel res of q802_map2.pgm: 3233x1994
+# resolution is meters / pixel according to http://wiki.ros.org/map_server
+# origin_x  = (3233*0.01)/2
+#           = 16.1650 
+# origin_y  = (1994*0.01)/2
+#           = 9.97
+# origin is relative to the lower-left pixel, hence -x, -y here
+origin: [-16.15, -9.97, 0.0]
 occupied_thresh: 0.65
 free_thresh: 0.196
 negate: 0
