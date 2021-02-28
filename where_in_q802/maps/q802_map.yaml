@@ -7,7 +7,11 @@ resolution: 0.01
 # origin_y  = (1994*0.01)/2
 #           = 9.97
 # origin is relative to the lower-left pixel, hence -x, -y here
-origin: [-16.15, -9.97, 0.0]
+# origin: [-16.15, -9.97, 0.0]
+# However, the map is not a simple rectangle, plus there is free/white
+# space (in pixels) around the outside, hence this origin is hand-tuned
+# by observing where the laser scans hit w.r.t the 2D map and gazebo.
+origin: [-19.82, -10.70, 0.0]
 occupied_thresh: 0.65
 free_thresh: 0.196
 negate: 0

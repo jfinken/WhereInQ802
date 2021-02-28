@@ -95,6 +95,15 @@ cp src/pgm_map_creator/maps/<YOUR MAP NAME>  src/<YOUR PACKAGE NAME>/maps/<YOUR 
 # http://wiki.ros.org/map_server#YAML_format
 ```
 
+#### Localization: Launch
+```
+# term 1: the world, gazebo, rviz
+roslaunch where_in_q802 world.launch
+
+# term 2: map-server, amcl, move_base nodes
+roslaunch where_in_q802 amcl.launch
+```
+
 #### Teleop Package
 
 If you prefer to control your robot to help it localize itself, add the teleop

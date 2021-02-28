@@ -40,7 +40,8 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <model name='Q802'>
-      <pose>-4.12697 -2.66081 0 0 -0 0</pose>
+      <!-- <pose>-4.12697 -2.66081 0 0 -0 0</pose> -->
+      <pose>0 0 0 0 -0 0</pose>
       <link name='Wall_10'>
         <collision name='Wall_10_Collision'>
           <geometry>
