@@ -1,10 +1,10 @@
 ### WhereInQ802
 
+![](screencaps/where_in_q802_4.png)
+
 #### Overview
 
 Where am I in Q802: Adaptive Monte Carlo Localization in ROS 1-noetic
-
-This is a WIP.
 
 #### Setup
 
