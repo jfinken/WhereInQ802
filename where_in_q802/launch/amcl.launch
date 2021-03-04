@@ -35,7 +35,7 @@
              A larger range, with a high maximum might be too computationally
              extensive for a low-end system-->
         <param name="min_particles" value="500"/>
-        <param name="max_particles" value="2500"/>
+        <param name="max_particles" value="3000"/>
 
         <!-- update_min_a and update_min_d:
 
@@ -71,6 +71,15 @@
         <param name="laser_z_hit" value="0.95"/>
         <!-- Mixture weight for the z_rand part of the model (default: 0.05)-->
         <param name="laser_z_rand" value="0.05"/>
+
+        <!-- odom_model_type is "diff" such that it will use the sample_motion_model_odometry
+        algorithm from Probabilistic Robotics, p136; this model uses these noise parameters
+        where the default is 0.2.  Here we make them significantly smaller -->
+        <param name="odom_model" value="diff"/>
+        <param name="odom_alpha1" value="0.005"/>
+        <param name="odom_alpha2" value="0.005"/>
+        <param name="odom_alpha3" value="0.008"/>
+        <param name="odom_alpha4" value="0.005"/>
 
     </node>
 
