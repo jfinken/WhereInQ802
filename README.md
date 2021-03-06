@@ -95,7 +95,7 @@ cp src/pgm_map_creator/maps/<YOUR MAP NAME>  src/<YOUR PACKAGE NAME>/maps/<YOUR 
 # http://wiki.ros.org/map_server#YAML_format
 ```
 
-#### Localization: Launch
+#### Adaptive Monte Carlo Localization: Launch
 ```
 # term 1: the world, gazebo, rviz
 roslaunch where_in_q802 world.launch
@@ -114,3 +114,11 @@ catkin_make
 source devel/setup.bash
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
+
+#### Further Reading
+- [AMCL in ROS1](http://wiki.ros.org/amcl)
+- [A Particle Filter Tutorial for Mobile Robot Localization](http://www.cim.mcgill.ca/~yiannis/particletutorial.pdf)
+- [Particle Filter in Robotics, Thrun](https://dl.acm.org/doi/pdf/10.5555/2073876.2073937)
+- [Monte Carlo Localization, wiki](https://en.wikipedia.org/wiki/Monte_Carlo_localization)
+- [Kalman Filter, 1](http://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/)
+- [Kalman Filter, 2](http://robotsforroboticists.com/kalman-filtering/)
